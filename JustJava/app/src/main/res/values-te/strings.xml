@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">"జస్ట్ జావా "</string>
+    <string name="name">పేరు</string>
+    <string name="toppings">టోప్పింగ్స్ </string>
+    <string name="toppings_whipped_cream">విప్పేడ్ క్రీం</string>
+    <string name="toppings_chocolate">చాక్లెట్</string>
+    <string name="quantity">మోతాదు</string>
+    <string name="order">ఆర్డర్</string>
+    <string name="warning_large_order">100 కప్పుల కంటే ఎక్కువ ఆర్డర్ చేయలేరు!</string>
+    <string name="warning_small_order">కనీసం 1 కప్పు ఆర్డర్ చేయవలెను</string>
+    <string name="order_subject"><xliff:g id="customer_name">%s</xliff:g> కోసం జస్ట్ జావా ఆర్డర్</string>
+    <string name="order_name">పేరు: <xliff:g id="customer_name">%s</xliff:g></string>
+    <string name="order_toppings_whipped_cream">విప్పేడ్ క్రీం? <xliff:g id="addWhippedCream">%b</xliff:g></string>
+    <string name="order_toppings_chocolate">చాక్లెట్? <xliff:g id="addChocolate">%b</xliff:g></string>
+    <string name="order_quantity">మోతాదు: <xliff:g id="quantity">%d</xliff:g></string>
+    <string name="order_total">మొత్తం: <xliff:g id="total">%s</xliff:g></string>
+    <string name="order_greeting">ధన్యవాదములు!</string>
+</resources>

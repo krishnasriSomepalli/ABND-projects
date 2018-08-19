@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.foo.helloandroid.MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/udacity" />
+
+    <TextView
+        android:id="@+id/a"
+        android:paddingTop="16dp"
+        android:paddingLeft="24dp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Udacity"
+        app:layout_constraintTop_toBottomOf="@id/image"/>
+
+    <TextView
+        android:id="@+id/b"
+        android:paddingTop="16dp"
+        android:paddingLeft="24dp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2465 Latham St"
+        app:layout_constraintTop_toBottomOf="@id/a" />
+
+    <TextView
+        android:id="@+id/c"
+        android:paddingTop="16dp"
+        android:paddingLeft="24dp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mountain View, CA 94043"
+        app:layout_constraintTop_toBottomOf="@id/b" />
+
+    <TextView
+        android:paddingTop="16dp"
+        android:paddingLeft="24dp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="650-555-5555"
+        app:layout_constraintTop_toBottomOf="@id/c" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Music</string>
+    <string name="back_btn">←</string>
+    <string name="now_playing_label">Now Playing</string>
+</resources>

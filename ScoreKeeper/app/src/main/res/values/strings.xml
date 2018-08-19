@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="sport">Cricket</string>
+    <string name="team_A_name">Team A</string>
+    <string name="init_score">0</string>
+    <string name="plus_one">+1</string>
+    <string name="plus_4">+4</string>
+    <string name="plus_6">+6</string>
+    <string name="team_B_name">Team B</string>
+    <string name="reset">Reset</string>
+</resources>

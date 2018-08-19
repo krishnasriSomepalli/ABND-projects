@@ -1,0 +1,29 @@
+<!--Source: http://www.playbuzz.com/jackoneil10/the-hardest-avengers-quiz-youll-ever-take-->
+<resources>
+    <string name="app_name">Quiz - MCU</string>
+    <string name="intro">Are you a super-fan of the Marvel Cinematic Universe? Jump into their world with the most difficult/fun Avengers Trivia this side of Asgard!</string>
+
+    <string name="q1">1. Who was assigned by Nick Fury to specifically monitor the cosmic cube, a.k.a Tesseract before Loki\'s arrival on Earth?</string>
+    <string name="q1_o1">Agent Coulson</string>
+    <string name="q1_o2">Black Widow</string>
+    <string name="q1_o3">Hawkeye</string>
+    <string name="q1_o4">Agent Hill</string>
+
+    <string name="q2">2. What language(s) is Black Widow fluent in?</string>
+    <string name="q2_o1">Latin</string>
+    <string name="q2_o2">German</string>
+    <string name="q2_o3">French</string>
+    <string name="q2_o4">Russian</string>
+
+    <string name="q3">3. How many dimensions are there in Dr. Strange?</string>
+
+    <string name="q4">4. Which of these is NOT the name of one of the "Heroes Three" of Asgard?</string>
+    <string name="q4_o1">Bjorn</string>
+    <string name="q4_o2">Fandral</string>
+    <string name="q4_o3">Hogun</string>
+    <string name="q4_o4">Volstagg</string>
+
+    <string name="start">Start</string>
+    <string name="next">Next</string>
+    <string name="replay">Replay</string>
+</resources>

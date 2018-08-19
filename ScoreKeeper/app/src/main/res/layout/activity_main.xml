@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.example.android.scorekeeper.MainActivity">
+
+    <TextView
+        android:id="@+id/sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_space"
+        android:text="@string/sport"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/team_A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_space"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/sport">
+
+        <TextView
+            android:id="@+id/team_A_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/team_A_name"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/team_A_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_space"
+            android:gravity="center_horizontal"
+            android:text="@string/init_score"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text" />
+
+        <Button
+            android:id="@+id/team_A_plus1"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_space"
+            android:onClick="plusOneA"
+            android:text="@string/plus_one"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/team_A_plus4"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_space"
+            android:onClick="plusFourA"
+            android:text="@string/plus_4"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/team_A_plus6"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_space"
+            android:onClick="plusSixA"
+            android:text="@string/plus_6"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="@dimen/medium_space"
+        android:background="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/team_A"
+        app:layout_constraintRight_toLeftOf="@id/team_B"
+        app:layout_constraintTop_toBottomOf="@id/sport" />
+
+    <LinearLayout
+        android:id="@+id/team_B"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_space"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sport">
+
+        <TextView
+            android:id="@+id/team_B_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/team_B_name"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/team_B_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_space"
+            android:gravity="center_horizontal"
+            android:text="@string/init_score"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text" />
+
+        <Button
+            android:id="@+id/team_B_plus1"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_space"
+            android:onClick="plusOneB"
+            android:text="@string/plus_one"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/team_B_plus4"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_space"
+            android:onClick="plusFourB"
+            android:text="@string/plus_4"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/team_B_plus6"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/small_space"
+            android:onClick="plusSixB"
+            android:text="@string/plus_6"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/team_A_img"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fireworks_height"
+        android:layout_marginTop="@dimen/medium_space"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/team_B_img"
+        app:layout_constraintTop_toBottomOf="@id/team_A" />
+
+    <WebView
+        android:id="@+id/team_B_img"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fireworks_height"
+        android:layout_marginTop="@dimen/medium_space"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/team_A_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team_B" />
+
+    <Button
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/large_space"
+        android:onClick="reset"
+        android:text="@string/reset"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

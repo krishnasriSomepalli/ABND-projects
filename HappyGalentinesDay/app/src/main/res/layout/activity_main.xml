@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E91E63"
+    tools:context="com.example.foo.happygalentinesday.MainActivity">
+
+    <ImageView
+        android:id="@+id/a"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/a"
+        app:layout_constraintLeft_toLeftOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="200dp"
+        android:src="@drawable/b"
+        app:layout_constraintRight_toRightOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/a"
+        app:layout_constraintBottom_toTopOf="@id/c"
+        android:textColor="#000000"
+        android:background="#FFEB3B"
+        android:text="Oh, Ann, you’re so sweet and innocent and pretty. You beautiful tropical fish, I've said this to you before and I know it makes you uncomfortable, but you're thoughtful, and you're brilliant, and your ambiguous ethnic blend perfectly represents the dream of the American melting pot. You are such a good friend, you’re a beautiful, talented, brilliant, powerful musk-ox. Thank you, ox. Nobody can fill your shoes, Ann, with those tiny little doll feet. I miss you, you cunning, pliable, chestnut-haired sunfish." />
+
+    <ImageView
+        android:id="@+id/c"
+        android:layout_width="175dp"
+        android:layout_height="140dp"
+        android:src="@drawable/c"
+        app:layout_constraintLeft_toLeftOf = "parent"
+        app:layout_constraintBottom_toTopOf = "@id/from"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:src="@drawable/d"
+        app:layout_constraintRight_toRightOf = "parent"
+        app:layout_constraintBottom_toTopOf = "@id/from"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="#FCE4EC"
+        android:background="#E91E63"
+        android:text="Love, Leslie"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UserProfile</string>
+    <string name="name">Krishna Sri Somepalli</string>
+    <string name="birthday">27/10/1997</string>
+    <string name="country">India</string>
+</resources>
