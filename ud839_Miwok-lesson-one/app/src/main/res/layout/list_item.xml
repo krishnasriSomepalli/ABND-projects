@@ -40,4 +40,19 @@
             tools:text="one" />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_play"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"/>
+    </FrameLayout>
 </LinearLayout>
