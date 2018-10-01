@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_height">150dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="elevation">16dp</dimen>
+    <dimen name="text_secondary">14sp</dimen>
+    <dimen name="text_primary">20sp</dimen>
+</resources>
