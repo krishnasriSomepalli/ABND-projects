@@ -44,7 +44,6 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
             }
         });
 
-
         TextView magnitude = (TextView) convertView.findViewById(R.id.magnitude);
         magnitude.setText((new DecimalFormat("0.0")).format((double)eq.getMagnitude()));
         GradientDrawable magnitudeCircle = (GradientDrawable) magnitude.getBackground();
@@ -71,45 +70,34 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         int bgColor;
         switch (magFloor) {
             case 0:
-                Log.d("color", Integer.toString(magFloor));
             case 1:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude1;
                 break;
             case 2:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude2;
                 break;
             case 3:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude3;
                 break;
             case 4:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude4;
                 break;
             case 5:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude5;
                 break;
             case 6:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude6;
                 break;
             case 7:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude7;
                 break;
             case 8:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude8;
                 break;
             case 9:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude9;
                 break;
             default:
-                Log.d("color", Integer.toString(magFloor));
                 bgColor = R.color.magnitude10plus;
                 break;
         }
