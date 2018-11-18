@@ -2,12 +2,18 @@ package com.example.android.newsapp;
 
 import android.app.LoaderManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,6 +25,24 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private NewsArticleAdapter adapter;
     private ListView newsArticleListView;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +57,31 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public Loader<List<NewsArticle>> onCreateLoader(int i, Bundle bundle) {
-        if(isConnected())
-            return new NewsArticleLoader(this,Utils.USGS_REQUEST_URL);
+        if(isConnected()) {
+            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+            String searchTerm = sharedPrefs.getString(
+                    getString(R.string.settings_query_key),
+                    getString(R.string.settings_query_default));
+
+            String orderBy  = sharedPrefs.getString(
+                    getString(R.string.settings_order_by_key),
+                    getString(R.string.settings_order_by_default)
+            );
+
+            Uri baseUri = Uri.parse(Utils.USGS_REQUEST_URL);
+            Uri.Builder uriBuilder = baseUri.buildUpon();
+
+            uriBuilder.appendQueryParameter("q", searchTerm);
+            uriBuilder.appendQueryParameter("show-tags", "contributor");
+            uriBuilder.appendQueryParameter("order-by", orderBy);
+            uriBuilder.appendQueryParameter("api-key", getString(R.string.api_key));
+
+            return new NewsArticleLoader(this, uriBuilder.toString());
+        }
         else {
             findViewById(R.id.progress).setVisibility(View.GONE);
-            ((TextView)findViewById(R.id.empty)).setText("No internet connection.");
+            ((TextView)findViewById(R.id.empty)).setText(com.example.android.newsapp.R.string.no_connection_message);
             return null;
         }
     }
@@ -46,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoadFinished(Loader<List<NewsArticle>> loader, List<NewsArticle> articles) {
         findViewById(R.id.progress).setVisibility(View.GONE);
         if(articles==null) {
-            ((TextView)findViewById(R.id.empty)).setText("No articles found");
+            ((TextView)findViewById(R.id.empty)).setText(com.example.android.newsapp.R.string.no_data_message);
             return;
         }
         updateUI(articles);

@@ -24,7 +24,7 @@ import java.util.TimeZone;
 public class Utils {
 
     public static final String LOG_TAG = MainActivity.class.getSimpleName();
-    public static final String USGS_REQUEST_URL = "https://content.guardianapis.com/search?q=technology&show-tags=contributor&api-key=test";
+    public static final String USGS_REQUEST_URL = "https://content.guardianapis.com/search";
 
     public static List<NewsArticle> fetchEarthquakeData(String urlString) {
         if(urlString==null || urlString.equals(""))

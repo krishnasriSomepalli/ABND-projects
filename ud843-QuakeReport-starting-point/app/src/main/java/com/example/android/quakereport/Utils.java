@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 
 public final class Utils {
     public static final String LOG_TAG = EarthquakeActivity.class.getSimpleName();
-    public static final String USGS_REQUEST_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
+    public static final String USGS_REQUEST_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query";
 
     public static List<Earthquake> fetchEarthquakeData(String urlString) {
         if(urlString==null || urlString.equals(""))
